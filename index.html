@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAMOX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            color: #333; /* Dark gray text */
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center items horizontally */
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #007bff; /* Blue title */
+        }
+
+        .box {
+            width: 120px;
+            height: 100px;
+            margin: 20px;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            background-color: white; /* White background for boxes */
+        }
+
+        .telegram, .instagram {
+            color: black;
+        }
+
+        .footer {
+            margin-top: 30px;
+            position: relative;
+            color: #555; /* Gray footer text */
+        }
+
+        .logo {
+            margin-top: 10px;
+        }
+
+        img {
+            width: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Dark theme */
+        .dark-theme {
+            background-color: #181818; /* Dark background */
+            color: white; /* Light text */
+        }
+
+        .dark-theme .box {
+            background-color: #282828; /* Dark box background */
+            color: white; /* Light text in boxes */
+        }
+
+        .dark-theme h1 {
+            color: #1e90ff; /* Bright blue for title in dark theme */
+        }
+
+        .dark-theme .footer {
+            color: #bbb; /* Light gray footer text in dark theme */
+        }
+
+        .theme-toggle {
+            margin-top: 20px;
+        }
+
+        .toggle-btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff; /* Button color */
+            color: white; /* Button text color */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>RAMOX</h1>
+
+    <div class="container">
+        <div class="box telegram" onclick="window.open('https://t.me/Bache_Asil', '_blank')">
+            Telegram
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/242px-Telegram_2019_Logo.svg.png" alt="Telegram" class="logo">
+        </div>
+        <div class="box instagram" onclick="window.open('https://www.instagram.com/raamoox', '_blank')">
+            Instagram
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" class="logo">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Created by RAMOX</p>
+    </div>
+
+    <div class="theme-toggle">
+        <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark/Light Theme</button>
+    </div>
+
+    <script>
+        let darkTheme = false;
+
+        function toggleTheme() {
+            darkTheme = !darkTheme;
+            document.body.classList.toggle('dark-theme', darkTheme);
+        }
+    </script>
+</body>
+</html>
